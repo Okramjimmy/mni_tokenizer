@@ -1,0 +1,42 @@
+# System files
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+*.so
+
+# Data (Ignore large raw datasets)
+*.json
+*.txt
+!requirements.txt
+!LICENSE
+
+# Intermediate Training Data
+data/
+*.spacy
+
+# Training Output (Ignore checkpoints, keep best)
+output/
+!output/model-best/
+
+# Keep the SentencePiece model
+!meitei_tokenizer.model
+!meitei_tokenizer.vocab
+# Training Scripts and Configs (Ignore)
+train.sh
+prepare_data.py
+train_sentencepiece.py
+evaluate_model.py
+base_config.cfg
+config.cfg
+reference_config.cfg
+TRAINING_README.md
+
+# Logs
+*.log
