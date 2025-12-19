@@ -22,7 +22,7 @@ data/
 *.spacy
 
 # Training Output (Ignore checkpoints, keep best)
-output/
+output/*
 !output/model-best/
 
 # Keep the SentencePiece model

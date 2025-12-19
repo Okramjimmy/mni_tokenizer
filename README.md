@@ -96,6 +96,21 @@ for sent in doc.sents:
     print(sent.text)
 ```
 
+### 4. Web API (FastAPI)
+Start the high-performance local web server:
+```bash
+uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+```
+- **Docs/Swagger UI**: Visit `http://localhost:8000/docs`
+- **API Endpoint**: `POST /split`
+
+**Example Request (curl):**
+```bash
+curl -X POST "http://localhost:8000/split" \
+     -H "Content-Type: application/json" \
+     -d '{"text": "ꯆꯦꯔꯣꯀꯤ ꯑꯁꯤ ꯑꯣꯀ꯭ꯂꯥꯍꯣꯃꯥꯒꯤ ꯁꯍꯔꯅꯤ ꯫ ꯃꯁꯤ ꯌꯥꯝꯅ ꯆꯥꯎꯏ ꯫"}'
+```
+
 ## 📂 Repository Structure
 
 -   `output/model-best`: The trained spaCy model.
